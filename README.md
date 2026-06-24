@@ -1,27 +1,46 @@
-## 📖 使用指南
+<div align="center">
 
-### 1. 软件界面总览
-本软件采用直观的交互设计，核心操作流程如下图所示：
+# M2D (Music2Dance) AI Studio
+
+**基于生成式 AI 的音频驱动 3D 人体动作生成系统**
+
+[![Windows](https://img.shields.io/badge/Platform-Windows-0078D4?logo=windows)](https://github.com)
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC_BY--NC_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
+[![Python](https://img.shields.io/badge/Python-3.9+-3776AB?logo=python)](https://www.python.org/)
+
+---
+
+*“把汗水变成珍珠，把梦想变成实际。”*
+
+</div>
+
+## 💡 项目简介
+**M2D AI Studio** 是一款面向游戏开发与动捕动画制作的端侧 AI 工具。它能够通过深度学习模型自动分析音频的节奏、频率与瞬时特征，并生成精准对齐的 3D 人体动作（BVH 格式）。
 
 ![软件主界面](menu.PNG)
 
-### 2. 操作流程说明
-1. **音频输入**：点击“选择音乐文件”加载您的目标音频（支持 wav, mp3, flac 等格式）。
-2. **裁剪配置**：若音频时长超过 20 秒，可通过滑块截取您需要生成的 20 秒片段。
-3. **参数微调**：
-   - **推理步数**：建议设置为 15-30，值越大生成质量越细腻但耗时越长。
-   - **求解器阶数**：推荐选择 3，以平衡生成速度与动态平滑度。
-   - **包含手部动作**：勾选后将计算高维手指关节，动作表现更完整。
-   - **输出帧率**：支持 30FPS 或 60FPS，请根据您后续导入的游戏引擎（如 UE5/Unity）需求选择。
-4. **生成与保存**：点击“开始生成”，系统将自动运行深度学习推理并弹出文件保存窗口，将结果保存为 `.bvh` 资产文件。
+## 🛠 功能亮点
+- **零显卡依赖**：内置高效 ONNX 运行时环境，CPU 环境下即可完成复杂扩散模型推理。
+- **高阶采样算法**：集成 DPM-Solver++ 求解器，支持 1-3 阶自适应调节，平衡生成速度与平滑度。
+- **工业级对齐**：原生兼容 SMPL-X 拓扑规范，支持亚帧级 Slerp 插值，直接交付标准 BVH 动作资产。
+- **端侧一体化**：从特征工程到动力学逆解的全自动端到端管线。
 
-### 3. 环境需求与安装说明
-- **操作系统**：Windows 10/11 64-bit。
-- **硬件要求**：建议拥有 8GB 以上内存。本软件内置了高效的 ONNX 推理引擎，即使在没有独立显卡的 CPU 环境下也能完成推理。
-- **安装方法**：直接运行安装包中生成的 `M2D舞蹈生成_Setup.exe`，按向导提示完成安装，即可在开始菜单或桌面直接启动。
+## 🚀 快速开始
+1. **下载安装**：前往 [Releases](你的Release地址) 页面下载最新安装包 `M2D舞蹈生成_Setup.exe`。
+2. **加载音频**：支持 `wav`, `mp3`, `flac` 等主流格式。
+3. **参数配置**：根据目标引擎（UE5/Unity/Blender）选择帧率，推荐使用默认采样参数以获得最佳平衡。
+4. **一键导出**：点击开始生成，自动完成姿态解算并导出 `.bvh` 文件。
 
-### 4. 常见问题 (FAQ)
-- **生成的动捕数据导入 Blender/UE5 闪烁？** 
-  请确保在动作重定向时，根骨骼（Root/Pelvis）的偏移量已按系统提示进行缩放对齐。
-- **生成速度过慢？** 
-  请尝试将推理步数调小，或关闭“包含手部动作”以降低计算负载。
+## ⚠️ 版权与免责声明
+- **协议说明**：本项目仅供**学术研究与个人学习使用**，严禁用于任何商业营利场景。
+- **合规声明**：本软件生成的动作资产若用于公开展示，请在显著位置标注本项目出处。
+
+## 🙏 致谢
+本项目的核心算法与工程架构受以下先进工作的启发与支持：
+- **数据集**：[FineDance](https://github.com/Finedance-dataset)
+- **核心算法**：[EDGE](https://github.com/chahuja/EDGE), [DDPM](https://github.com/hojonathanho/diffusion), [IDDPM](https://github.com/openai/improved-diffusion), [DPM-Solver](https://github.com/LuChengTHU/dpm-solver)
+
+---
+<div align="center">
+Made by Jiangnan University Multimodal Laboratory
+</div>
