@@ -26,7 +26,7 @@
 - **端侧一体化**：从特征工程到动力学逆解的全自动端到端管线。
 
 ## 🚀 快速开始
-1. **下载安装**：前往 [Releases](你的Release地址) 页面下载最新安装包 `M2D舞蹈生成_Setup.exe`。
+1. **下载安装**：前往 [Releases](https://github.com/laytonzjl/Music2Dance-AI-Studio/releases/tag/v1.0.0-alpha) 页面下载最新安装包 `M2D舞蹈生成_Setup.exe`。
 2. **加载音频**：支持 `wav`, `mp3`, `flac` 等主流格式。
 3. **参数配置**：根据目标引擎（UE5/Unity/Blender）选择帧率，推荐使用默认采样参数以获得最佳平衡。
 4. **一键导出**：点击开始生成，自动完成姿态解算并导出 `.bvh` 文件。
