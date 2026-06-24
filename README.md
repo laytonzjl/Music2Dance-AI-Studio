@@ -8,6 +8,8 @@
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC_BY--NC_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
 [![Python](https://img.shields.io/badge/Python-3.9+-3776AB?logo=python)](https://www.python.org/)
 
+**[简体中文](#简体中文)** | **[English Version](#english-version)**
+
 *“把汗水变成珍珠，把梦想变成实际。”*
 
 ---
@@ -15,6 +17,10 @@
 ![软件主界面](menu.PNG)
 
 </div>
+
+---
+
+# 简体中文
 
 ## 📖 项目概述
 **M2D AI Studio** 是一个专为游戏开发人员、动画师及 3D 内容创作者打造的端侧多模态舞蹈动作生成软件。输入音乐（目前最长支持20秒），该软件就能利用扩散模型（Diffusion Model）进行高效的舞蹈动作生成，实现从音乐到 BVH 动作资产的一键式转换。
@@ -60,5 +66,53 @@
 本项目仅限用于**非营利性的科研测试与学习交流**，严禁未经许可将本工具用于任何商业产品的开发或营利性行为。
 
 ---
+
+# English Version
+
+## 📖 Project Overview
+**M2D AI Studio** is an edge-side multimodal dance motion generation software designed for game developers, animators, and 3D content creators. By inputting music (currently supporting up to 20 seconds), the software leverages diffusion models for efficient dance motion generation, enabling one-click conversion from music to BVH motion assets.
+
+## 🚀 Quick Start
+1. **Get the App**: Visit the [Releases page](https://github.com/laytonzjl/Music2Dance-AI-Studio/releases/tag/v1.0.0-alpha) to download the latest installer.
+2. **Environment**: The software is fully packaged; no prior installation of Python or CUDA is required.
+3. **Audio Preprocessing**: Choose clear audio with distinct beats. For audio longer than 20 seconds, use the cropping feature to limit the generation to 20 seconds.
+4. **Export Specification**: Generated BVH files support direct import into Blender's action library. Simply perform retargeting to apply them to your character models.
+
+## ⚙️ Technical Features
+* **CPU Inference**: Efficient inference on standard desktop CPUs without the need for GPU acceleration.
+* **Frame Selection**: Supports 30FPS/60FPS output, compatible with major 3D engines.
+* **Hand Motion**: Supports generation of refined hand movements.
+
+## 🛠 Parameter Details
+| Parameter | Suggested Setting | Description |
+| :--- | :--- | :--- |
+| **Inference Steps** | 15 - 30 | Higher values yield more detail but take longer to generate. |
+| **Solver Order** | 3 | Higher order improves smoothness of diffusion iteration; 3 is recommended. |
+| **Hand Motion** | Enabled | Includes hand joint data, suitable for artistic animation needs. |
+| **Output FPS** | 60 | 60FPS is recommended for smooth animation in UE5 or Unity. |
+
+## ⚠️ System Limitations & Function Disclaimer
+* **Lightweight Architecture**: Designed as a lightweight edge-side system to facilitate rapid prototype verification for individual developers.
+* **Generation Quality Boundary**: Due to model weights being limited by open-source datasets and edge-side compute constraints, generation quality **is not equivalent to high-compute commercial motion engines**. It is intended for basic motion asset generation testing only.
+* **Asset Limitations**: The embedded asset library has a limited scope. For highly complex or dynamic dance sequences, deviations between generated results and expectations may occur; this is within the current technical boundaries.
+
+## ❓ FAQ
+* **Q: Why does the motion appear to "drift" on some characters?**
+  * A: Motion drift is usually caused by the offset of the Root/Pelvis bone. Please check and fix the height offset of the root bone during retargeting.
+* **Q: Why is memory usage high during execution?**
+  * A: The motion generation process loads full model weights. We recommend reserving at least 4GB of free system memory.
+* **Q: Is batch processing supported?**
+  * A: This version is single-inference mode. Batch automation will be updated in future iterations.
+
+## 🙏 Acknowledgments
+This project references and benefits from the following open-source works:
+* **Dataset**: [FineDance](https://github.com/Finedance-dataset)
+* **Algorithms**: [EDGE](https://github.com/chahuja/EDGE), [DDPM](https://github.com/hojonathanho/diffusion), [IDDPM](https://github.com/openai/improved-diffusion), [DPM-Solver](https://github.com/LuChengTHU/dpm-solver)
+
+## ⚠️ Copyright Notice
+This project is strictly for **non-profit research, testing, and educational purposes**. Commercial use of this tool for product development or profit-making activities without permission is strictly prohibited.
+
+---
 <div align="center">
+Made with ❤️ by Jiangnan University Multimodal Laboratory
 </div>
