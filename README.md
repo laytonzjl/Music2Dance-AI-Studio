@@ -114,5 +114,4 @@ This project is strictly for **non-profit research, testing, and educational pur
 
 ---
 <div align="center">
-Made with ❤️ by Jiangnan University Multimodal Laboratory
 </div>
