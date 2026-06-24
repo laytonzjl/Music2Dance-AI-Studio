@@ -8,37 +8,50 @@
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC_BY--NC_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
 [![Python](https://img.shields.io/badge/Python-3.9+-3776AB?logo=python)](https://www.python.org/)
 
----
-
 *“把汗水变成珍珠，把梦想变成实际。”*
 
-</div>
-
-## 💡 项目简介
-**M2D AI Studio** 是一款面向游戏开发与动画制作的简易音乐到人体舞蹈动作生成的工具。输入音乐，该软件就能生成对应的3D人体舞蹈动作（BVH 格式）。
+---
 
 ![软件主界面](menu.PNG)
 
-## 🛠 功能亮点
-- **依赖**：内置高效 ONNX 运行时环境，CPU 环境下即可完成推理。
-- **采样**：集成高阶求解器，支持 1-3 阶自适应调节，平衡生成速度与平滑度。
-- **对齐**：可以选定身体或者手部动作，选定输出帧数，直接输出可用的BVH动作资产。
+</div>
 
-## 🚀 快速开始
-1. **下载安装**：前往 [Releases](https://github.com/laytonzjl/Music2Dance-AI-Studio/releases/tag/v1.0.0-alpha) 页面下载最新安装包 `M2D舞蹈生成_Setup.exe`。
-2. **加载音频**：支持 `wav`, `mp3`, `flac` 等主流格式。
-3. **参数配置**：根据目标引擎（UE5/Unity/Blender）选择帧率，推荐使用默认采样参数以获得最佳平衡。
-4. **一键导出**：点击开始生成，自动导出 `.bvh` 文件。
+## 📖 项目概述
+**M2D AI Studio** 是一个专为游戏开发人员、动画师及 3D 内容创作者打造的端侧多模态舞蹈动作生成系统。该系统通过深度分析输入的音频流，提取音频特征，并利用扩散模型（Diffusion Model）进行高效的动作序列生成，实现从音乐到 BVH 动作资产的一键式转换。
 
-## ⚠️ 版权与免责声明
-- **协议说明**：本项目仅供**学术研究与个人学习使用**，严禁用于任何商业营利场景。
-- **合规声明**：本软件生成的动作资产若用于公开展示，请在显著位置标注本项目出处。
+## ⚙️ 技术特性
+* **CPU推理**：基于 `ONNX Runtime` 部署的推理引擎，无需 GPU 加速即可在普通桌面 CPU 上实现高效实时推理。
+* **帧数选择**：支持 30FPS/60FPS 动作输出，兼容主流 3D 引擎。
 
-## 🙏 致谢
-本项目的核心算法与工程架构受以下先进工作的启发与支持：
-- **数据集**：[FineDance](https://github.com/Finedance-dataset)
-- **核心算法**：[EDGE](https://github.com/chahuja/EDGE), [DDPM](https://github.com/hojonathanho/diffusion), [IDDPM](https://github.com/openai/improved-diffusion), [DPM-Solver](https://github.com/LuChengTHU/dpm-solver)
+## 🛠 功能参数详解
+| 参数名称 | 建议设置 | 说明 |
+| :--- | :--- | :--- |
+| **推理步数** | 15 - 30 | 值越高动作细节越丰富，但生成时间随之增加。 |
+| **求解器阶数** | 3 | 阶数越高，扩散迭代过程越平滑，平衡计算效率的首选。 |
+| **手部动作** | 开启 | 包含手部关节数据，适用于精细的艺术动画需求。 |
+| **输出帧率** | 60 | 推荐 60FPS 以保证在 UE5 或 Unity 中的动画线性平滑。 |
 
+## 🚀 快速上手说明
+1. **获取应用**：访问 [Releases 页面](https://github.com/laytonzjl/Music2Dance-AI-Studio/releases/tag/v1.0.0-alpha) 下载最新的安装程序。
+2. **环境准备**：软件已完成自动化封装，无需预先安装 Python 或 CUDA，直接运行即可。
+3. **音频预处理**：尽量选择音质清晰、节拍明显的音频片段。若音频过长，请使用窗口裁剪功能限定 20 秒内的生成范围。
+4. **导出规范**：生成的 BVH 文件支持直接拖拽至 Blender 动作库，执行重定向（Retargeting）操作即可应用到角色模型。
+
+## ❓ 常见问题排查 (FAQ)
+* **Q: 为什么生成的动作在某些角色上看起来有“漂移”？**
+  * A: 动作漂移通常源于根骨骼（Root/Pelvis）的偏移。请在动作重定向时，检查并固定根骨骼的高度偏移量。
+* **Q: 程序运行时占用内存较高？**
+  * A: 动作解算过程中会加载完整的模型权重与 3D 几何拓扑矩阵，建议预留 4GB 以上的系统空闲内存。
+* **Q: 是否支持批量处理？**
+  * A: 本版本为单次推理模式，批量自动化功能将在后续迭代中更新。
+
+## 🙏 鸣谢与资源声明
+本项目引用并受益于以下优秀开源工作：
+* **核心数据集**：[FineDance](https://github.com/Finedance-dataset) 提供的舞蹈动作基准。
+* **算法参考**：[EDGE](https://github.com/chahuja/EDGE), [DDPM](https://github.com/hojonathanho/diffusion), [IDDPM](https://github.com/openai/improved-diffusion), [DPM-Solver](https://github.com/LuChengTHU/dpm-solver)
+
+## ⚠️ 版权警示
+本项目仅限用于**非营利性的科研测试与学习交流**，严禁未经许可将本工具用于任何商业产品的开发或营利性行为。
 ---
 <div align="center">
 </div>
