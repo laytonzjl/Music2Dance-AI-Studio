@@ -1,7 +1,5 @@
 <div align="center">
 
-# Music2Dance AI Studio
-
 ![软件主界面](menu.PNG)
 
 [![Windows](https://img.shields.io/badge/Platform-Windows-0078D4?logo=windows)](https://github.com)
