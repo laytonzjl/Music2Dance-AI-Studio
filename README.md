@@ -1,6 +1,8 @@
 <div align="center">
 
-![软件主界面](menu.PNG)
+# Music2Dance AI Studio
+
+**基于生成式 AI 的音频驱动 3D 人体动作生成系统**
 
 [![Windows](https://img.shields.io/badge/Platform-Windows-0078D4?logo=windows)](https://github.com)
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC_BY--NC_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
@@ -9,6 +11,10 @@
 **[简体中文](#简体中文)** | **[English Version](#english-version)**
 
 *“把汗水变成珍珠，把梦想变成实际。”*
+
+---
+
+![软件主界面](menu.PNG)
 
 ---
 
