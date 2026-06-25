@@ -1,6 +1,6 @@
 <div align="center">
 
-# Music2Dance AI Studio
+![软件主界面](menu.PNG)
 
 **基于生成式 AI 的音频驱动 3D 人体动作生成系统**
 
@@ -13,8 +13,6 @@
 *“把汗水变成珍珠，把梦想变成实际。”*
 
 ---
-
-![软件主界面](menu.PNG)
 
 </div>
 
