@@ -12,9 +12,6 @@
 
 *“把汗水变成珍珠，把梦想变成实际。”*
 
-
-![软件主界面](menu.PNG)
-
 </div>
 
 
@@ -22,6 +19,8 @@
 
 ## 📖 项目概述
 **M2D AI Studio** 是一个专为游戏开发人员、动画师及 3D 内容创作者打造的端侧多模态舞蹈动作生成软件。输入音乐（目前最长支持20秒），该软件就能利用扩散模型（Diffusion Model）进行高效的舞蹈动作生成，实现从音乐到 BVH 动作资产的一键式转换。
+
+![软件主界面](menu.PNG)
 
 ## 🚀 快速上手说明
 1. **获取应用**：访问 [Releases 页面](https://github.com/laytonzjl/Music2Dance-AI-Studio/releases/tag/v1.0.0-alpha) 下载最新的安装程序。
