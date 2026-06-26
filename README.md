@@ -3,6 +3,7 @@
 # Music2Dance AI Studio
 
 **基于生成式 AI 的音频驱动 3D 人体动作生成系统**
+[下载应用](https://github.com/laytonzjl/Music2Dance-AI-Studio/releases/tag/v1.1.0)
 
 [![Windows](https://img.shields.io/badge/Platform-Windows-0078D4?logo=windows)](https://github.com)
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC_BY--NC_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
@@ -19,16 +20,16 @@
 
 ## 📖 项目概述
 ![软件主界面](menu.PNG)
-**M2D AI Studio** 是一个专为游戏开发人员、动画师及 3D 内容创作者打造的端侧多模态舞蹈动作生成软件。输入音乐（目前最长支持20秒），该软件就能利用扩散模型（Diffusion Model）进行高效的舞蹈动作生成，实现从音乐到 BVH 动作资产的一键式转换。
+**M2D AI Studio** 是一个专为游戏开发人员、动画师及 3D 内容创作者打造的端侧多模态舞蹈动作生成软件。输入音乐（目前最长支持20秒），该软件就能进行高效的舞蹈动作生成，实现从音乐到 BVH 动作资产的一键式转换。
 
 ## 🚀 快速上手说明
 1. **获取应用**：访问 [Releases](https://github.com/laytonzjl/Music2Dance-AI-Studio/releases/tag/v1.0.0-alpha) 页面下载最新的安装程序。
 2. **环境准备**：软件已完成自动化封装，无需预先安装 Python 或 CUDA，直接安装运行即可。
 3. **音频预处理**：尽量选择音质清晰、节拍明显的音频片段。若音频过长，请使用窗口裁剪功能限定 20 秒内的生成范围。
-4. **导出规范**：生成的 BVH 文件支持直接拖拽至 Blender 动作库，执行重定向（Retargeting）操作即可应用到角色模型。
+4. **导出规范**：生成的 BVH 文件支持直接拖拽至 Blender 或者其他引擎，执行重定向（Retargeting）操作即可应用到角色模型。
 
 ## ⚙️ 技术特性
-* **CPU推理**：无需 GPU 加速即可在普通桌面 CPU 上实现高效推理。
+* **CPU推理**：~~无需 GPU 加速即可在普通桌面 CPU 上实现高效推理。~~ 现已支持切换GPU加速！
 * **帧数选择**：支持 30FPS/60FPS 动作输出，兼容主流 3D 引擎。
 * **手部动作**：支持生成精细化的手部动作。
 
