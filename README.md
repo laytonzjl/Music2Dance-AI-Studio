@@ -2,7 +2,6 @@
  
 # Music2Dance AI Studio
 
-**基于生成式 AI 的音频驱动 3D 人体动作生成系统**
 [下载应用](https://github.com/laytonzjl/Music2Dance-AI-Studio/releases/tag/v1.1.0)
 
 [![Windows](https://img.shields.io/badge/Platform-Windows-0078D4?logo=windows)](https://github.com)
