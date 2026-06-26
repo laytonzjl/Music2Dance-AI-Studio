@@ -2,7 +2,7 @@
  
 # Music2Dance AI Studio
 
-[下载应用](https://github.com/laytonzjl/Music2Dance-AI-Studio/releases/tag/v1.1.0)
+[👉下载最新版本应用👈](https://github.com/laytonzjl/Music2Dance-AI-Studio/releases/tag/v1.1.0)
 
 [![Windows](https://img.shields.io/badge/Platform-Windows-0078D4?logo=windows)](https://github.com)
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC_BY--NC_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
